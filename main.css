@@ -1,0 +1,483 @@
+/*All the css will be written here*/
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+*::selection{
+	background-color: rgb(37,34,27);
+	color: white;
+}
+
+/*creating of variables*/
+:root{
+	--primary: rgb(0,123,255);
+	--dark_green: rgb(40,167,69);
+	--purple: rgb(80,31,185);
+	--green: rgb(5,192,63);
+}
+
+/*Using of google fonts*/
+@font-face{
+	font-family: Dosis;
+	src: url('fonts/fonts/Dosis-Regular.ttf');
+}
+
+@font-face{
+	font-family: Source_sans_pro;
+	src: url('fonts/fonts/SourceSansPro-ExtraLight.ttf');
+}
+
+@font-face{
+	font-family: Montserrat;
+	src: url('fonts/fonts/Montserrat-Light.ttf');
+}
+
+@font-face{
+	font-family: Roboto;
+	src: url('fonts/fonts/Roboto-Light.ttf');
+}
+
+body{
+	scroll-behavior: smooth;
+}
+
+/*Creating somec class that will be helping for us*/
+
+.centered{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.heading{
+	font-family: Dosis, arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+}
+
+.animated-div{
+	transition: transform 0.6s linear;
+}
+
+.animated-div:hover{
+	transform: translateY(-10px);
+}
+
+/*Styling of the header*/
+.header{
+	width: 100%;
+	height: 100vh;
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('images/section-bg-1.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	flex-direction: column;
+	background-attachment: fixed;
+}
+
+.header_content{
+	width: 100%;
+  height: 50%;
+  flex-direction: column;
+  color: white;
+  font-family: Source_sans_pro;
+  font-size: 14px;
+  font-weight: 100;
+  letter-spacing: 0.3em;
+}
+
+.header_started{
+  width: 172px;
+  height: 52px;
+  transform: translateY(79px);
+  border: 2px solid var(--purple);
+  border-radius: 10px;
+  background: var(--purple);
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: Montserrat;
+  outline: none;
+}
+
+.header_started:hover{
+	background: transparent;
+}
+
+/*Styling of the services section*/
+.services{
+	width: 100%;
+	height: auto;
+  min-height: 100vh;
+  padding: 10px;
+}
+
+.services_header{
+  text-align: center;
+	margin-top: 20px;
+	font-size: 3rem;
+	font-family: fangsong;
+}
+
+.services_header img{
+	width: 50px;
+}
+
+.services_content{
+  max-width: 100vw;
+  width: 100%;
+  flex-wrap: wrap;
+  height: auto;
+  min-height: 500px;
+  position: relative;
+  bottom: -20px;
+  padding: 5px;
+}
+
+.services_card{
+	width: 305px;
+  height: 200px;
+  margin: 10px;
+  position: relative;
+  flex-direction: column;
+}
+
+.services_icon
+{
+	font-size: 2.5rem;
+	-webkit-text-stroke: 1px white;
+  position: absolute;
+  top: 9%;
+}
+
+.services_card_title{
+  position: absolute;
+  top: 33%;
+}
+
+.services_card_para{
+	bottom: 9px;
+  position: absolute;
+  font-family: "Open Sans", arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.86;
+  color: #777;
+  text-align: center;
+}
+
+/*Styling of digital services section*/
+.digital_services{
+	width: 100vw;
+	min-height: 314px	;
+	background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/digital-section-bg.jpg');
+	flex-wrap: wrap;
+	height: 100%;
+}
+
+.digital_services_p{
+	width: 509px;
+  height: 292px;
+  margin: 6px;
+}
+
+.digital_services_r{
+	position: relative;
+}
+
+.digital_services_r_img{
+  width: 428px;
+  position: absolute;
+  top: -46px;
+}
+
+.digital_services_l{
+	flex-direction: column;
+	position: relative;
+}
+
+.digital_services_l_h{
+  font-size: 18px;
+  text-transform: uppercase;
+  color: white;
+  position: absolute;
+  top: 50px;
+}
+
+.digital_services_para{
+	font-weight: 400;
+	color: white;
+	font-size: 15px;
+	font-family: "Open Sans", arial, sans-serif;
+	line-height: 1.6;
+}
+
+.digital_services_l_btn{
+	width: 121px;
+  position: absolute;
+  bottom: 16%;
+  height: 35px;
+  background: var(--green);
+  color: rgb(157,18,161);
+  border: none;
+  outline: none;
+  font-weight: 400;
+  border-radius: 2px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  left: 0;
+}
+
+/*Styling of news section*/
+
+.news{
+	min-height: 60vw;
+	height: 100%;
+	position: relative;
+}
+
+.news_heading{
+	text-align: center;
+  margin-top: 20px;
+  font-size: 3rem;
+  font-family: fangsong;
+}
+
+.news_content{
+  width: 100%;
+  min-height: 500px;
+  flex-wrap: wrap;
+  top: 98px;
+  height: 100%;
+}
+
+.news_div{
+  width: 300px;
+  height: 450px;
+  margin: 10px;
+}
+
+.news_div_i{
+  width: 100%;
+  height: 40%;
+  background: rebeccapurple;
+  background-size: cover;
+}
+
+.news_news{
+	margin-top: 38px;
+  position: absolute;
+  max-width: 310px;
+}
+
+.news_content_h{
+  letter-spacing: 2px;
+  text-decoration: none;
+  color: #111;
+}
+
+.news_writer{
+	font-size: 11px;
+  color: #aaa;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  line-height: 1.6;
+}
+
+.news_para{
+	color: #777;
+  font-size: 15px;
+  line-height: 1.75;
+  font-family: "Open Sans", arial, sans-serif;
+  transform: translateY(17px);
+}
+
+.news_btn{
+	position: absolute;
+  bottom: -75px;
+  text-decoration: none;
+  color: #777;
+  background: #e5e5e5;
+  width: 99px;
+  height: 33px;
+}
+
+/*Styling our team section */
+.team{
+	min-height: 533px;
+	height: auto;
+	background-color: rgb(21,31,32);
+	position: relative;
+}
+
+.team_heading{
+	text-align: center;
+  margin-top: 20px;
+  font-size: 3rem;
+  font-family: fangsong;
+  color: white;
+}
+
+.team_content{
+	width: 100%;
+  min-height: 500px;
+  height: auto;
+  bottom: -18px;
+  flex-wrap: wrap;
+}
+
+.team_member{
+	width: 300px;
+  height: 300px;
+  margin: 10px;
+  position: relative;
+  flex-direction: column;
+}
+
+.t_m_img{
+	width: 113px;
+  height: 113px;
+  background: rebeccapurple;
+  border-radius: 50%;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+}
+
+.t_m_name{
+	font-weight: 300;
+  line-height: 1.2;
+  color: white;
+  font-family: Roboto;
+}
+
+.t_m_role{
+	color: rgb(94,103,110);
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.t_m_para{
+	position: absolute;
+  bottom: 24px;
+  margin: 8px;
+  font-size: 16px;
+  color: rgb(128,133,134);
+  margin-top: 20px;
+  font-family: Roboto;
+  text-align:center;
+}
+
+/*Styling of footer starts from here*/
+footer{
+	font-family: 'Poppins', sans-serif;
+	width: 100%;
+	background: #111;
+	color: white;
+	min-height: 400px;
+	flex-wrap: wrap;
+	height: auto;
+} 
+
+.footer_box{
+	width: 314px;
+  height: 350px;
+  margin: 10px;
+  position: relative;
+  flex-direction: column;
+}
+
+.footer_left h1{
+  position: absolute;
+	top: 0;
+	left: 0;
+	padding: 0 19px;
+}
+
+.footer_left h1:before{
+	content: '';
+  height: 45px;
+  width: 5px;
+  background: var(--green);
+  position: absolute;
+  left: 1px;
+}
+
+.footer_h{
+	margin-left: 5px;
+	font-size: 18px;
+	position: relative;
+}
+
+.footer_h:before{
+  content: '';
+  left: 0;
+  background: #555;
+  position: absolute;
+  width: 90%;
+  height: 2px;
+  bottom: -8px;
+}
+
+.footer_h:after{
+	content: '';	
+  left: 0;
+  width: 30%;
+  background-color: var(--green);
+  position: absolute;
+  height: 3px;
+  bottom: -8px;
+}
+
+.footer_c_c{
+	position: absolute;
+	bottom: 132px;
+  margin-left: 5px;
+}
+
+.footer_form{
+	position: absolute;
+  width: 100%;
+  height: 270px;
+  bottom: 65px;
+  flex-direction: column;
+  left: -24px;
+}
+
+.footer_form input, .footer_form textarea{
+	outline: none;
+	font-family: 'Roboto', sans-serif;
+	width: 80%;
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid #d5e1df;
+  margin:10px;
+  padding: 10px;
+  color: white;
+  transition: all 1s;
+}
+
+.footer_form input:focus, .footer_form textarea:focus{
+  border-bottom: 2px solid red;
+}
+
+.footer_f_btn{
+  position: absolute;
+  bottom: -17px;
+  width: 122px;
+  height: 37px;
+  cursor: pointer;
+  border: none;
+}
+
+.copy-right{
+	position: absolute;
+  bottom: 6px;
+  width: 100%;
+  text-align: center;
+}
